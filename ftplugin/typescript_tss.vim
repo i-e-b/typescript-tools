@@ -28,7 +28,8 @@ let g:TSSloaded = 1
 
 " assume tss is a globally available command
 if !exists("g:TSS")
-  let g:TSS = ["tss"]
+  let g:TSS = "tss"
+"["tss"]
 endif
 
 " assume user wants to inspect errors on project load/reload
@@ -437,8 +438,8 @@ echomsg "starting TSS, loading ".a:projectroot."..."
 python <<EOF
 
 projectroot = vim.eval("a:projectroot")
-print(vim.eval("g:TSS")+[projectroot])
-tss = subprocess.Popen(vim.eval("g:TSS")+[projectroot]
+print("tss "+projectroot)
+tss = subprocess.Popen("tss "+projectroot
                       ,bufsize=0
                       ,stdin=subprocess.PIPE
                       ,stdout=subprocess.PIPE
