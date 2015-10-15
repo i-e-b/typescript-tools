@@ -1,6 +1,6 @@
 {
   "name": "typescript-tools",
-  "version": "v0.3.1-2-g12c88d4",
+  "version": "v0.4.7",
   "description": "TypeScript Services commandline server",
   "bin": {
     "tss": "bin/tss"
@@ -17,5 +17,8 @@
   ],
   "preferGlobal": true,
   "author": "Claus Reinke",
-  "license": "Apache License, Version 2.0"
+  "license": "Apache License, Version 2.0",
+  "dependencies": {
+    "typescript": "1.5.0-beta"
+  }
 }
